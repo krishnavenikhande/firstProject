@@ -1,0 +1,42 @@
+<table border="1" cellspacing="0">";
+<?php
+$id=$_GET['id'];
+$con=mysqli_connect("localhost","root","","textile");
+$sql="select * from product where id=$id";
+while($rs=mysqli_query($con,$sql))
+{
+?>
+<tr>
+    <th>Title</th>
+    <td><?php echo $rw[1]?></td>
+</tr>
+<tr>
+    <th>Material</th>
+    <td><?php echo $rw[2]?></td>
+</tr>
+<tr>
+    <th>Quality</th>
+    <td><?php echo $rw[3]?></td>
+</tr>
+<tr>
+    <th>uses</th>
+    <td><?php echo $rw[4]?></td>
+</tr>
+<tr>
+    <th>Sizes</th>
+    <td><?php echo $rw[5]?></td>
+</tr>
+<tr>
+    <th>Gms</th>
+    <td><?php echo $rw[6]?></td>
+</tr>
+<tr>
+    <th>Colors</th>
+    <td><?php echo $rw[7]?></td>
+</tr>   
+
+<?php
+}
+?>
+
+</table
